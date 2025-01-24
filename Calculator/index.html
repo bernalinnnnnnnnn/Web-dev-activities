@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="./JS/numbers.js"></script>
+    <script src="./JS/operations.js"></script>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background: #1c1c1c;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    color: #ff77aa;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+form[name="calculator"] {
+    background-color: #2e1b2b;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+#display {
+    grid-column: span 3;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4d2957;
+    color: #ffefff;
+    font-size: 2.5em;
+    text-align: right;
+}
+
+#operator {
+    grid-column: span 1;
+    width: 100px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff77aa;
+    color: #1c1c1c;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #8e3e88;
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #ff77aa;
+}
+
+button:active {
+    background-color: #521b47;
+    transform: scale(0.95);
+}
+
+</style>
+
+<body>
+    <h1>Bernalyn's Calculator</h1>
+    <form name="calculator">
+        <input type="text" id="display" value="0" readonly>
+        <input type="text" id="display2" readonly disabled style="display:none;">
+        <input type="text" id="operator" readonly>
+
+        <button type="button" onclick="seven()">7</button>
+        <button type="button" onclick="eight()">8</button>
+        <button type="button" onclick="nine()">9</button>
+        <button type="button" onclick="plus()">+</button>
+
+        <button type="button" onclick="four()">4</button>
+        <button type="button" onclick="five()">5</button>
+        <button type="button" onclick="six()">6</button>
+        <button type="button" onclick="minus()">-</button>
+
+        <button type="button" onclick="one()">1</button>
+        <button type="button" onclick="two()">2</button>
+        <button type="button" onclick="three()">3</button>
+        <button type="button" onclick="times()">*</button>
+
+        <button type="button" onclick="zero()">0</button>
+        <button type="button" onclick="decimal()">.</button>
+        <button type="button" onclick="equals()">=</button>
+        <button type="button" onclick="divide()">/</button>
+
+    </form>
+
+</body>
+
+</html>
